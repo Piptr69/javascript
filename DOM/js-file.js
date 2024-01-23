@@ -19,3 +19,11 @@ header.textContent = "I'm a blue h3!";
 header.style.color = 'blue';
 
 container.appendChild(header);
+
+const box = document.createElement('div');
+box.classList.add('box');
+box.style.backgroundColor = 'pink';
+box.style.borderColor = 'black'
+container.appendChild(box);
+const header1 = document.createElement('h1');
+const p2 = document.createElement('p2');
