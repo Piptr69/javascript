@@ -10,4 +10,12 @@ const p = document.createElement('p');
 p.classList.add('p');
 p.textContent = "Hey I'm red!";
 p.style.color = 'red';
+
 container.appendChild(p);
+
+const header = document.createElement('h3');
+header.classList.add('h3');
+header.textContent = "I'm a blue h3!";
+header.style.color = 'blue';
+
+container.appendChild(header);
