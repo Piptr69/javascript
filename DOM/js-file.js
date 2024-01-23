@@ -23,7 +23,18 @@ container.appendChild(header);
 const box = document.createElement('div');
 box.classList.add('box');
 box.style.backgroundColor = 'pink';
-box.style.borderColor = 'black'
-container.appendChild(box);
+box.style.borderColor = 'black';
+box.style.border = 'solid';
+
 const header1 = document.createElement('h1');
+header1.classList.add('header1');
+header1.textContent = "I'm a div";
+
 const p2 = document.createElement('p2');
+p2.classList.add('p2');
+p2.textContent = "ME TOO!";
+
+box.appendChild(header1);
+box.appendChild(p2);
+
+container.appendChild(box);
