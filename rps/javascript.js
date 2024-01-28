@@ -9,6 +9,7 @@ function getComputerChoice()
 }
 
 function playRound(playerSelection, computerSelection) {
+    let whoWon;
     playerSelection = playerSelection.toLowerCase();
     playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1);
    
@@ -34,17 +35,6 @@ function playRound(playerSelection, computerSelection) {
 }
     let playerScore = 0;
     let computerScore = 0;
-  function game()
-  {
-    const playerSelection =prompt("Choose Rock, Paper or Scissors");
-    const computerSelection = getComputerChoice();
-
-    console.log("Computer chose: " + computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-
-    if (playRound(playerSelection, computerSelection) == "COMPUTER WINS") computerScore++;
-    else if (playRound(playerSelection, computerSelection) == "PLAYER WINS") playerScore++;
-  }
 
   const rockButton = document.createElement("button");
   const paperButton = document.createElement("button");
@@ -58,8 +48,49 @@ function playRound(playerSelection, computerSelection) {
 
   paperButton.style.margin = '12px';
 
+  let score;
+  rockButton.addEventListener('click', function () {
+    score = playRound('rock',getComputerChoice());
+    if (score == "COMPUTER WINS" || score === "TIE") computerScore++;
+    if (score == "PLAYER WINS" || score === "TIE") playerScore++;
+    console.log(score);
+
+    displayScoreP.textContent = `Player score: ${playerScore}`;
+    displayScoreC.textContent = `Computer score: ${computerScore}`;
+  })
+
+  scissorsButton.addEventListener('click', function () {
+    score = playRound('scissors',getComputerChoice());
+    if (score == "COMPUTER WINS" || score === "TIE") computerScore++;
+    if (score == "PLAYER WINS" || score === "TIE") playerScore++;
+    console.log(score);
+
+    displayScoreP.textContent = `Player score: ${playerScore}`;
+    displayScoreC.textContent = `Computer score: ${computerScore}`;
+  })
+
+  paperButton.addEventListener('click', function () {
+    score = playRound('paper',getComputerChoice());
+    if (score == "COMPUTER WINS" || score === "TIE") computerScore++;
+    if (score == "PLAYER WINS" || score === "TIE") playerScore++;
+    console.log(score);
+
+    displayScoreP.textContent = `Player score: ${playerScore}`;
+    displayScoreC.textContent = `Computer score: ${computerScore}`;
+  })
+
+  const displayScoreP = document.createElement('p');
+  const displayScoreC = document.createElement('p');
+
+  const scoreContainer = document.querySelector('#scores');
+  scoreContainer.style.border = 'solid';
+  scoreContainer.style.width = '160px';
+  scoreContainer.style.paddingLeft = '12px';
+
+
   container.appendChild(rockButton);
   container.appendChild(paperButton);
   container.appendChild(scissorsButton);
 
-  
+  scoreContainer.appendChild(displayScoreP);
+  scoreContainer.appendChild(displayScoreC);
