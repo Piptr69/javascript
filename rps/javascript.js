@@ -38,15 +38,13 @@ function playRound(playerSelection, computerSelection) {
   {
     const playerSelection =prompt("Choose Rock, Paper or Scissors");
     const computerSelection = getComputerChoice();
+
     console.log("Computer chose: " + computerSelection);
     console.log(playRound(playerSelection, computerSelection));
-    if(playRound(playerSelection, computerSelection) == "COMPUTER WINS") computerScore++;
-    else if(playRound(playerSelection, computerSelection) == "PLAYER WINS") playerScore++;
+
+    if (playRound(playerSelection, computerSelection) == "COMPUTER WINS") computerScore++;
+    else if (playRound(playerSelection, computerSelection) == "PLAYER WINS") playerScore++;
   }
-  game();
-  game();
-  game();
-  game();
-  game();
+    
   console.log("Player score: " + playerScore);
   console.log("Computer score: " + computerScore);
