@@ -49,3 +49,17 @@ function playRound(playerSelection, computerSelection) {
   const rockButton = document.createElement("button");
   const paperButton = document.createElement("button");
   const scissorsButton = document.createElement("button");
+
+  const container = document.querySelector('#container');
+  
+  rockButton.textContent = 'Rock';
+  paperButton.textContent = 'Paper';
+  scissorsButton.textContent = 'Scissors';
+
+  paperButton.style.margin = '12px';
+
+  container.appendChild(rockButton);
+  container.appendChild(paperButton);
+  container.appendChild(scissorsButton);
+
+  
