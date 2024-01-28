@@ -46,4 +46,6 @@ function playRound(playerSelection, computerSelection) {
     else if (playRound(playerSelection, computerSelection) == "PLAYER WINS") playerScore++;
   }
 
-  
+  const rockButton = document.createElement("button");
+  const paperButton = document.createElement("button");
+  const scissorsButton = document.createElement("button");
