@@ -45,6 +45,5 @@ function playRound(playerSelection, computerSelection) {
     if (playRound(playerSelection, computerSelection) == "COMPUTER WINS") computerScore++;
     else if (playRound(playerSelection, computerSelection) == "PLAYER WINS") playerScore++;
   }
-    
-  console.log("Player score: " + playerScore);
-  console.log("Computer score: " + computerScore);
+
+  
