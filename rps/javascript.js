@@ -81,12 +81,14 @@ function playRound(playerSelection, computerSelection) {
 
   const displayScoreP = document.createElement('p');
   const displayScoreC = document.createElement('p');
+  
+  displayScoreP.textContent = `Player score: ${playerScore}`;
+  displayScoreC.textContent = `Computer score: ${computerScore}`;
 
   const scoreContainer = document.querySelector('#scores');
   scoreContainer.style.border = 'solid';
   scoreContainer.style.width = '160px';
   scoreContainer.style.paddingLeft = '12px';
-
 
   container.appendChild(rockButton);
   container.appendChild(paperButton);
